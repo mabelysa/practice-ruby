@@ -5,7 +5,7 @@
 #puts item1[:type]
 
 class Grocery_items
-  attr_reader :type, :color, :price
+  attr_reader :type, :color, :price, :shelflife
   attr_writer :price
 
   def initialize(input_options)
@@ -31,7 +31,7 @@ class Grocery_items
   # end
 
   def print_info
-    puts "#{type} is #{color} and costs #{price}."
+    puts "#{type} is #{color}, costs #{price} and is #{shelflife}."
   end
 
   def price_increase
@@ -39,8 +39,16 @@ class Grocery_items
   end
 end
 
-item1 = Grocery_items.new({ type: "apple", color: "red", price: 1 })
-item2 = Grocery_items.new({ type: "plaintain", color: "yellow", price: 2 })
+class Food < Grocery_items
+  def initialize(input_options)
+    super
+    @shelflife = input_options[:shelflife]
+  end
+end
+
+item1 = Grocery_items.new({ type: "apple", color: "red", price: 1, shelflife: "Good" })
+item2 = Grocery_items.new({ type: "plaintain", color: "yellow", price: 2, shelflife: "Expired" })
+
 item1.print_info
 item2.print_info
 p item1.price
@@ -48,3 +56,5 @@ item1.price_increase
 item1.print_info
 item2.price_increase
 item2.print_info
+item1.shelflife
+item1.print_info

@@ -3,14 +3,7 @@ class Vehicle
     @speed = 0
     @direction = "north"
   end
-
-
-class Car
-  def initialize
-    @speed = 0
-    @direction = "north"
-  end
-
+  
   def brake
     @speed = 0
   end
@@ -18,6 +11,14 @@ class Car
   def accelerate
     @speed += 10
   end
+
+class Car < Vehicle
+  def initialize
+    super
+    @make = "Honda"
+    @model = "Civic"
+  end
+
 
   def turn(new_direction)
     @direction = new_direction
@@ -28,18 +29,11 @@ class Car
   end
 end
 
-class Bike
+class Bike < Vehicle
   def initialize
-    @speed = 0
-    @direction = "north"
-  end
-
-  def brake
-    @speed = 0
-  end
-
-  def accelerate
-    @speed += 10
+    super 
+    @type = "Commuter"
+    @weight = 20
   end
 
   def turn(new_direction)
@@ -50,3 +44,5 @@ class Bike
     puts "Ring ring!"
   end
 end
+
+bike = Bike.new
