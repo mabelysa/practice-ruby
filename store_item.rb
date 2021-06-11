@@ -4,15 +4,24 @@
 
 #puts item1[:type]
 
-class Grocery_items
-  attr_reader :type, :color, :price, :shelflife
-  attr_writer :price
+# module Priceable
+#   attr_reader :type, :color, :price, :shelflife
+#   attr_writer :price
 
-  def initialize(input_options)
-    @type = input_options[:type]
-    @color = input_options[:color]
-    @price = input_options[:price]
-  end
+#   def price_increase
+#     @price = 1.05 * @price
+#   end
+# end
+
+# class Grocery_items
+  # attr_reader :type, :color, :price, :shelflife
+  # attr_writer :price
+
+  # def initialize(input_options)
+  #   @type = input_options[:type]
+  #   @color = input_options[:color]
+  #   @price = input_options[:price]
+  # end
 
   # def type
   #   @type
@@ -30,31 +39,33 @@ class Grocery_items
   #   @price = input_price
   # end
 
-  def print_info
-    puts "#{type} is #{color}, costs #{price} and is #{shelflife}."
-  end
+  # def print_info
+  #   puts "#{type} is #{color}, costs #{price} and is #{shelflife}."
+  # end
 
-  def price_increase
-    @price = 1.05 * @price
-  end
-end
+  # def price_increase
+  #   @price = 1.05 * @price
+  # end
+# end
 
-class Food < Grocery_items
-  def initialize(input_options)
-    super
-    @shelflife = input_options[:shelflife]
-  end
-end
+# class Food < Grocery_items
+#   include Priceable
 
-item1 = Grocery_items.new({ type: "apple", color: "red", price: 1, shelflife: "Good" })
-item2 = Grocery_items.new({ type: "plaintain", color: "yellow", price: 2, shelflife: "Expired" })
+#   def initialize(input_options)
+#     super
+#     @shelflife = input_options[:shelflife]
+#   end
+# end
 
-item1.print_info
-item2.print_info
-p item1.price
-item1.price_increase
-item1.print_info
-item2.price_increase
-item2.print_info
-item1.shelflife
-item1.print_info
+# item1 = Grocery_items.new({ type: "apple", color: "red", price: 1, shelflife: "Good" })
+# item2 = Grocery_items.new({ type: "plaintain", color: "yellow", price: 2, shelflife: "Expired" })
+
+# item1.print_info
+# item2.print_info
+# p item1.price
+# item1.price_increase
+# item1.print_info
+# item2.price_increase
+# item2.print_info
+# item1.shelflife
+# item1.print_info
