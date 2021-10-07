@@ -44,17 +44,17 @@
 
 # p less_than_100([99, 101, 88, 4, 2000, 50])
 
-def less_than_100(input)
-  output = []
-  input.each do |num|
-    if num < 100
-      output << num
-    end
-  end
-  output
-end
+# def less_than_100(input)
+#   output = []
+#   input.each do |num|
+#     if num < 100
+#       output << num
+#     end
+#   end
+#   output
+# end
 
-p less_than_100([99, 101, 88, 4, 2000, 50])
+# p less_than_100([99, 101, 88, 4, 2000, 50])
 
 # ----------------------------------------------
 # Map: Double
@@ -83,7 +83,7 @@ p less_than_100([99, 101, 88, 4, 2000, 50])
 
 # p double_value([4, 2, 5, 99, -4])
 
-# ----------------------------------------------
+# ---------------------------------------------
 # Array Max
 # Input: [5, 17, -4, 20, 12]
 # Output: 20
@@ -113,3 +113,94 @@ p less_than_100([99, 101, 88, 4, 2000, 50])
 # end
 
 # p max_value([5, 17, -4, 20, 12])
+# ---------------------------------------------
+
+# def product_of_all_numbers(input)
+#   i = 0
+#   product = 1
+#   while i < input.length
+#     product = product * input[i]
+#     i += 1
+#   end
+#   product
+# end
+
+# p product_of_all_numbers([1, 2, 3, 4])
+
+# def product_of_all_numbers(input)
+#   product = 1
+#   input.each do |num|
+#     product = product * num
+#   end
+#   product
+# end
+
+# p product_of_all_numbers([1, 2, 3, 4])
+# ---------------------------------------------
+
+# def select_numbers(input)
+#   i = 0
+#   output = []
+#   while i < input.length
+#     if input
+#     output << input[i][0]
+#     i += 1
+#   end
+#   output
+# end
+
+# p select_numbers([2, 1, 3, 2, 5, 1, 2, 6, 2, 7, 1, 5, 6, 3, 2, 6, 2, 1, 2])
+# -----------------------------------------------------
+# Reduce: Product, Basic Array
+
+=begin
+-define/create a function
+-accepts the elements/numbers in the array and gives us its product as the output.
+-while loop iterate through the input array
+-initialize an index, set it equal to zero
+-add parameters in function
+-return the output or product
+-call function at the end
+=end
+
+# def product_numbers(input)
+#   i = 0
+#   product = 1
+#   while i < input.length
+#     product = product * input[i]
+#     i += 1
+#   end
+#   return product
+# end
+
+# p product_numbers([1, 2, 3, 4])
+
+# def product_numbers(input)
+#   product = 1
+#   input.each do |num|
+#     product = product * num
+#   end
+#   product
+# end
+
+# p product_numbers([1, 2, 3, 4])
+# ------------------------------------------------------------
+# Reverse Array, Basic Array
+=begin
+-set up a function that takes in an array
+-iterate starting at the last index of the array
+-shovel in each of those elements at each iteration in reverse order into a new array
+-return the new array which will be in reverse order
+=end
+
+def reverse_array(array)
+  new_arr = []
+  i = array.length - 1
+  while i >= 0
+    new_arr << array[i]
+    i -= 1
+  end
+  new_arr
+end
+
+p reverse_array([1, 2, 3, 4, 5])
