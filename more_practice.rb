@@ -184,7 +184,7 @@
 # end
 
 # p product_numbers([1, 2, 3, 4])
-# ------------------------------------------------------------
+# -----------------------------------------------------
 # Reverse Array, Basic Array
 =begin
 -set up a function that takes in an array
@@ -193,14 +193,70 @@
 -return the new array which will be in reverse order
 =end
 
-def reverse_array(array)
-  new_arr = []
-  i = array.length - 1
-  while i >= 0
-    new_arr << array[i]
-    i -= 1
-  end
-  new_arr
-end
+# def reverse_array(array)
+#   new_arr = []
+#   i = array.length - 1
+#   while i >= 0
+#     new_arr << array[i]
+#     i -= 1
+#   end
+#   new_arr
+# end
 
-p reverse_array([1, 2, 3, 4, 5])
+# p reverse_array([1, 2, 3, 4, 5])
+
+# def reverse_array(array)
+#   new_arr = []
+#   i = 1
+#   while i < array.length - 1
+#     new_arr << array[i]
+#     i -= 1
+#   end
+#   new_arr
+# end
+
+# p reverse_array([1, 2, 3, 4, 5])
+
+#----------------------------------------------------
+# def say_hello(input)
+#   input.times do
+#     p "Hello!"
+#   end
+# end
+
+# say_hello(5)
+
+#-----------------------------------------------
+=begin
+- define/create a function that takes in selected numbers from the original array
+- while loop to iterate through the input array and shovel in the index selected into the new array
+- initialize an index by value of the element of the given input. based on value of this index, will increase index.
+- add parameters in function
+- return the output
+- call function at the end
+=end
+
+# input: [2, 1, 3, 2, 5, 1, 2, 6, 2, 7, 1, 5, 6, 3, 2, 6, 2, 1, 2]
+
+#               x
+#                        x
+#                           x
+
+# output: [2, 3, 1, 2, ]
+
+# def skip_it(input)
+#   output = []
+#   i = 0
+#   while i < input.length
+#     output << input[i]
+#     i += input[i]
+#   end
+#   output
+# end
+
+# p skip_it([2, 1, 3, 2, 5, 1, 2, 6, 2, 7, 1, 5, 6, 3, 2, 6, 2, 1, 2])
+-------------------------------------
+Alternate Capitals
+
+if string[i] = a, b, c, d, 
+if string[1] = string[1].upcase
