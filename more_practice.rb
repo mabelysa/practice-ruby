@@ -198,6 +198,7 @@
 #   i = array.length - 1
 #   while i >= 0
 #     new_arr << array[i]
+#     puts i
 #     i -= 1
 #   end
 #   new_arr
@@ -255,8 +256,102 @@
 # end
 
 # p skip_it([2, 1, 3, 2, 5, 1, 2, 6, 2, 7, 1, 5, 6, 3, 2, 6, 2, 1, 2])
--------------------------------------
-Alternate Capitals
+# -----------------------------------------------------
+# Reverse String
 
-if string[i] = a, b, c, d, 
-if string[1] = string[1].upcase
+=begin
+  - define/create a function
+  - the function accepts the elements in the string and gives the output of the string in reverse.
+  - while loop iterate through the input string
+  - initialize an index 
+  - return the output string
+  - call the function at the end
+=end
+
+# def reverse_string(input)
+#   new_reverse = ""
+#   i = input.length - 1
+#   while i >= 0
+#     new_reverse << input[i]
+#     i -= 1
+#   end
+#   new_reverse
+# end
+
+# p reverse_string("abcde")
+
+# string = "hello world"
+# p string[2]
+
+# --------------------------------------------------------
+# Show Me The Money
+
+=begin
+- define/create a function
+- the function accepts the elements in the string and use a conditional statement: if dollar sign is present, return true. If dollar sign is absent, return false.
+- while loop iterate through the input string
+- initialize an index 
+- return the output either true or false 
+- call the function at the end
+=end
+
+# def show_me_the_money(input)
+#   i = 0
+#   while i < input.length
+#     if input[i] == "$"
+#       return true
+#     end
+#     i += 1
+#   end
+#   false
+# end
+
+# p show_me_the_money("i hate $ but i love money i know i know im crazy")
+# p show_me_the_money("abcdefghijklmnopqrstuvwxyz")
+
+# string = "hello there"
+# splitted = string.split("")
+# p splitted
+# p splitted.join("")
+
+#------------------------------------------------------------
+# Alternate Capitals
+
+=begin
+-define/create a function that takes in a string as an input and returns a copy as the output and capitalizes every other letter.
+-capitalization should begin with second letter.
+-a while loop to iterate through the input string
+-initialize an index
+-shovel in each of those characters at each iteration into a new string.
+-return the new string 
+- call function at the end  
+=end
+
+# def alternate_capitals(input)
+#   i = 1
+#   while i < input.length
+#     input[i] = input[i].upcase
+#     i += 2
+#   end
+#   input
+# end
+
+# p alternate_capitals("hello, how are your porcupines today?")
+
+# string = "a, b, c, d"
+# p string[0].upcase
+
+def upcase(string)
+  index = 0
+  index2 = 1
+  new_string = ""
+  while index < string.length
+    new_string << string[index]
+    index += 2
+    new_string << string[index2].upcase
+    index2 += 2
+  end
+  return new_string
+end
+
+p upcase("hello, how are your porcupines today?")
