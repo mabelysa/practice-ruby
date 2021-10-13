@@ -327,31 +327,120 @@
 - call function at the end  
 =end
 
-# def alternate_capitals(input)
-#   i = 1
-#   while i < input.length
-#     input[i] = input[i].upcase
-#     i += 2
-#   end
-#   input
-# end
+def alternate_capitals(input)
+  i = 1
+  while i < input.length
+    puts input[i]
+    input[i] = input[i].upcase
+    i += 2
+  end
+  input
+end
 
-# p alternate_capitals("hello, how are your porcupines today?")
+p alternate_capitals("hello, how are your porcupines today?")
+p alternate_capitals("hello, how are your porcupines today?hi")
+
+string = "hello"
+puts
+p string.length
+p string[4]
 
 # string = "a, b, c, d"
 # p string[0].upcase
 
-def upcase(string)
-  index = 0
-  index2 = 1
-  new_string = ""
-  while index < string.length
-    new_string << string[index]
-    index += 2
-    new_string << string[index2].upcase
-    index2 += 2
-  end
-  return new_string
-end
+# def upcase(string)
+#   index = 0
+#   index2 = 1
+#   new_string = ""
+#   while index < string.length
+#     new_string << string[index]
+#     index += 2
+#     puts "_____"
+#     puts string[index]
+#     new_string << string[index2].upcase
+#     index2 += 2
+#   end
+#   return new_string
+# end
 
-p upcase("hello, how are your porcupines today?")
+# p upcase("hello, how are your porcupines today?")
+
+# var = " "
+
+# p var.upcase
+
+# var = nil
+# p nil.upcase
+
+# var = nil
+# p nil.to_s.upcase
+
+# --------------------------------------------------
+# First Duplicate Character
+
+# def first_dupe(input)
+#   i = 0
+#   output = ""
+#   while i < input.length
+#     if input[i] == input[i + 1]
+#       output << input[i]
+#       return output
+#     end
+#     i += 1
+#   end
+# end
+
+# p first_dupe("abcdefghhijkkloooop")
+# OR
+# def dupe(string)
+#   output = string[0]
+#   i = 1
+#   while i < string.length
+#     if output == string[i] #comparison
+#       return output
+#     else
+#       output = string[i] #assignment
+#       i += 1
+#     end
+#   end
+# end
+
+# p dupe("abcdefghhijkkloooop")
+# ----------------------------------------------
+# Palindrome
+
+# def palindrome(input)
+#   i = 0
+#   while i < input.length
+#     if input[i] == input[i - 1]
+#       return true
+#     end
+#     i += 1
+#   end
+#   false
+# end
+
+# p palindrome("racecar")
+# p palindrome("baloney")
+# p palindrome("civic")
+
+# def palindrome?(string)
+#   i = 0
+#   while i < (string.length / 2)
+#     if string[i] != string[-(i + 1)]
+#       return false
+#     else
+#       i += 1
+#     end
+#   end
+#   return true
+# end
+
+# p palindrome?("whatupbutt")
+# ------------------------
+# Hamming
+
+# def hamming(input)
+# end
+
+# p hamming("ABCDEFG", "ABCXEOG")
