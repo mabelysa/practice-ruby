@@ -465,12 +465,34 @@
 - call the function at the end
 =end
 
-def etl(array, number)
-  new_hash = {}
-  array.each do |char|
-    new_hash[char] = number
+# def etl(array, number)
+#   new_hash = {}
+#   array.each do |char|
+#     new_hash[char] = number
+#   end
+#   return new_hash
+# end
+
+# p etl(["a", "e", "i", "o", "u"], 1)
+
+# ----------------------------------------
+=begin  c
+- define/set up a function
+- takes a hash (input) and returns an array (output)
+- iterate through the input
+- initialize an index
+- add parameters in the function
+- call function at the end
+=end
+
+def flattenhash(hash)
+  array = []
+  hash.each do |key, value|
+    # array << hash[key][value]
+    array << key
+    array << value
   end
-  return new_hash
+  return array
 end
 
-p etl(["a", "e", "i", "o", "u"], 1)
+p flattenhash({ "a" => 1, "b" => 2, "c" => 3, "d" => 4 })
