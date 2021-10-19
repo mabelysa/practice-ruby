@@ -454,6 +454,7 @@
 # p hamming("ABCDEFG", "ABCXEOG")
 
 #-----------------------------------------
+#ETL # 1
 
 =begin
 - set up/define a function 
@@ -476,7 +477,9 @@
 # p etl(["a", "e", "i", "o", "u"], 1)
 
 # ----------------------------------------
-=begin  c
+#Flatten Hash
+
+=begin  
 - define/set up a function
 - takes a hash (input) and returns an array (output)
 - iterate through the input
@@ -485,14 +488,77 @@
 - call function at the end
 =end
 
-def flattenhash(hash)
-  array = []
+# def flattenhash(hash)
+#   array = []
+#   hash.each do |key, value|
+#     # array << hash[key][value]
+#     array << key
+#     array << value
+#   end
+#   return array
+# end
+
+# p flattenhash({ "a" => 1, "b" => 2, "c" => 3, "d" => 4 })
+
+#--------------------------------------------
+#Flip Hash
+
+=begin 
+- define/create a function
+- takes a hash (input) and in a new hash, returns the values switched.
+- iterate through the input using an each loop
+- initialize an index
+- add parameters to the function
+- call function at the end
+=end
+
+# def hash(hash)
+#   new_hash = {}
+#   hash.each do |key, value|
+#     new_hash[value] = key
+#   end
+#   return new_hash
+# end
+
+# p hash({ "a" => 1, "b" => 2, "c" => 3 })
+
+# ---------------------------------------------
+# ETL #2
+
+=begin 
+-define/create a function
+-takes a hash(with an array of capital letters) and returns a hash flipped with lowercase letters
+-iterate through the input using an each loop
+-initialize an index 
+-add parameters to the function
+-call function at the end
+=end
+
+def hash(hash)
+  new_hash = {}
   hash.each do |key, value|
-    # array << hash[key][value]
-    array << key
-    array << value
+    value.each do |char|
+      new_hash[char.downcase] = key
+    end
   end
-  return array
+  new_hash = Hash[new_hash.sort_by { |k, _v| k.to_s }]
 end
 
-p flattenhash({ "a" => 1, "b" => 2, "c" => 3, "d" => 4 })
+# p hash({
+#     1 => ["A", "E", "I", "O", "U"],
+#   })
+
+# p hash({
+#     1 => ["A", "E"],
+#     2 => ["D", "G"],
+#   })
+
+p hash({
+    1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+    2 => ["D", "G"],
+    3 => ["B", "C", "M", "P"],
+    4 => ["F", "H", "V", "W", "Y"],
+    5 => ["K"],
+    8 => ["J", "X"],
+    10 => ["Q", "Z"],
+  })
