@@ -327,23 +327,23 @@
 - call function at the end  
 =end
 
-def alternate_capitals(input)
-  i = 1
-  while i < input.length
-    puts input[i]
-    input[i] = input[i].upcase
-    i += 2
-  end
-  input
-end
+# def alternate_capitals(input)
+#   i = 1
+#   while i < input.length
+#     puts input[i]
+#     input[i] = input[i].upcase
+#     i += 2
+#   end
+#   input
+# end
 
-p alternate_capitals("hello, how are your porcupines today?")
-p alternate_capitals("hello, how are your porcupines today?hi")
+# p alternate_capitals("hello, how are your porcupines today?")
+# p alternate_capitals("hello, how are your porcupines today?hi")
 
-string = "hello"
-puts
-p string.length
-p string[4]
+# string = "hello"
+# puts
+# p string.length
+# p string[4]
 
 # string = "a, b, c, d"
 # p string[0].upcase
@@ -440,7 +440,37 @@ p string[4]
 # ------------------------
 # Hamming
 
+=begin
+-define/create a function
+-accepts the characters of a string and returns the count of the characters that are different.
+-count variable to keep count of the different variables.
+-while loop iterate through the input and compare each character with the next character. If the characters are different, add to the count of the count variable.
+-shovel
+=end
+
 # def hamming(input)
 # end
 
 # p hamming("ABCDEFG", "ABCXEOG")
+
+#-----------------------------------------
+
+=begin
+- set up/define a function 
+- takes in two parameters, an array and a number
+- outputs a hash whose keys are the array and values are the hashes.
+- iterate through the input
+- initialize an index
+- add parameters in the function
+- call the function at the end
+=end
+
+def etl(array, number)
+  new_hash = {}
+  array.each do |char|
+    new_hash[char] = number
+  end
+  return new_hash
+end
+
+p etl(["a", "e", "i", "o", "u"], 1)
