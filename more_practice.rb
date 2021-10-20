@@ -534,15 +534,15 @@
 -call function at the end
 =end
 
-def hash(hash)
-  new_hash = {}
-  hash.each do |key, value|
-    value.each do |char|
-      new_hash[char.downcase] = key
-    end
-  end
-  new_hash = Hash[new_hash.sort_by { |k, _v| k.to_s }]
-end
+# def hash(hash)
+#   new_hash = {}
+#   hash.each do |key, value|
+#     value.each do |char|
+#       new_hash[char.downcase] = key
+#     end
+#   end
+#   new_hash = Hash[new_hash.sort_by { |k, _v| k.to_s }]
+# end
 
 # p hash({
 #     1 => ["A", "E", "I", "O", "U"],
@@ -553,12 +553,60 @@ end
 #     2 => ["D", "G"],
 #   })
 
-p hash({
-    1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
-    2 => ["D", "G"],
-    3 => ["B", "C", "M", "P"],
-    4 => ["F", "H", "V", "W", "Y"],
-    5 => ["K"],
-    8 => ["J", "X"],
-    10 => ["Q", "Z"],
-  })
+# p hash({
+#     1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+#     2 => ["D", "G"],
+#     3 => ["B", "C", "M", "P"],
+#     4 => ["F", "H", "V", "W", "Y"],
+#     5 => ["K"],
+#     8 => ["J", "X"],
+#     10 => ["Q", "Z"],
+#   })
+
+# ------------------------------------------
+
+=begin 
+- define/create a function
+- prints out every number from 1 to N 
+- positive, integer greater than 1
+- output: if divisible by 3, print "FIZZ", if divisible by 5, print "BUZZ", if divisible by both 3 and 5, print "FIZZBUZZ"
+- while loop to iterate through the input, conditional statements based on the criteria to print out the output
+- initialize an index
+- add parameters
+- call the function at the end
+
+
+def fizzbuzz(input)
+i = 0
+while i > input.length
+  if input % 3 == 0
+    p "FIZZ"
+  elsif input % 5 == 0
+    p "BUZZ"
+  else
+    p "FIZZBUZZ"
+  end
+i += 1
+end
+return input
+end
+p fizzbuzz(15)
+=end
+
+def fizzbuzz(input)
+  i = 1
+  while i <= input
+    if i % 3 == 0 && i % 5 == 0
+      p "FIZZBUZZ"
+    elsif i % 3 == 0 #FIZZ
+      p "FIZZ"
+    elsif i % 5 == 0
+      p "BUZZ" #BUZZ
+    else
+      p i  #1, 2, 4
+    end
+    i += 1
+  end
+end
+
+fizzbuzz(5)
