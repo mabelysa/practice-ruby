@@ -314,7 +314,7 @@
 # p splitted
 # p splitted.join("")
 
-#------------------------------------------------------------
+#--------------------------------------------------------
 # Alternate Capitals
 
 =begin
@@ -448,10 +448,20 @@
 -shovel
 =end
 
-# def hamming(input)
+# def hamming(string1, string2)
+#   i = 0
+#   output = 0
+#   while i < string1.length
+#     if string1[i] != string2[i]
+#       output = output + 1
+#     end
+#     i += 1
+#   end
+#   return output
 # end
 
 # p hamming("ABCDEFG", "ABCXEOG")
+# p hamming("ABCDEFG", "ABCZYUG")
 
 #-----------------------------------------
 #ETL # 1
@@ -593,20 +603,68 @@ end
 p fizzbuzz(15)
 =end
 
-def fizzbuzz(input)
-  i = 1
-  while i <= input
-    if i % 3 == 0 && i % 5 == 0
-      p "FIZZBUZZ"
-    elsif i % 3 == 0 #FIZZ
-      p "FIZZ"
-    elsif i % 5 == 0
-      p "BUZZ" #BUZZ
-    else
-      p i  #1, 2, 4
-    end
-    i += 1
-  end
-end
+# def fizzbuzz(input)
+#   i = 1
+#   while i <= input
+#     if i % 3 == 0 && i % 5 == 0
+#       p "FIZZBUZZ"
+#     elsif i % 3 == 0 #FIZZ
+#       p "FIZZ"
+#     elsif i % 5 == 0
+#       p "BUZZ" #BUZZ
+#     else
+#       p i  #1, 2, 4
+#     end
+#     i += 1
+#   end
+# end
 
-fizzbuzz(5)
+# fizzbuzz(5)
+# -----------------------------------------------------------
+# Reverse Words
+
+# def reversewords(words)
+#   new_words = words.split(" ")
+#   new_array = []
+#   i = new_words.length - 1
+#   while i >= 0
+#     new_array << new_words[i]
+#     i -= 1
+#   end
+#   new_array.join(" ")
+# end
+
+# p reversewords("popcorn is so cool isn’t it yeah i thought so")
+
+# def reverse_string(input)
+#   new_reverse = ""
+#   i = input.length - 1
+#   while i >= 0
+#     new_reverse << input[i]
+#     i -= 1
+#   end
+#   new_reverse
+# end
+
+# def reverse_array(array)
+#   new_arr = []
+#   i = array.length - 1
+#   while i >= 0
+#     new_arr << array[i]
+#     puts i
+#     i -= 1
+#   end
+#   new_arr
+# end
+
+# p reverse_array([1, 2, 3, 4, 5])
+
+# def reverse_array(array)
+#   new_arr = []
+#   i = 1
+#   while i < array.length - 1
+#     new_arr << array[i]
+#     i -= 1
+#   end
+#   new_arr
+# end
