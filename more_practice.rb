@@ -623,18 +623,18 @@ p fizzbuzz(15)
 # -----------------------------------------------------------
 # Reverse Words
 
-# def reversewords(words)
-#   new_words = words.split(" ")
-#   new_array = []
-#   i = new_words.length - 1
-#   while i >= 0
-#     new_array << new_words[i]
-#     i -= 1
-#   end
-#   new_array.join(" ")
-# end
+def reversewords(words)
+  new_words = words.split(" ")
+  new_array = []
+  i = new_words.length - 1
+  while i >= 0
+    new_array << new_words[i]
+    i -= 1
+  end
+  new_array.join(" ")
+end
 
-# p reversewords("popcorn is so cool isn’t it yeah i thought so")
+p reversewords("popcorn is so cool isn’t it yeah i thought so")
 
 # def reverse_string(input)
 #   new_reverse = ""
