@@ -759,3 +759,19 @@ p fizzbuzz(15)
 # leap(1996)
 # leap(1900)
 # leap(2000)
+# ---------------------------------------------------
+# Multiples of 3 and 5
+
+def multiples(input)
+  i = 0
+  sum = 0
+  while i < input
+    if i % 3 == 0 || i % 5 == 0
+      sum = sum + i
+    end
+    i += 1
+  end
+  return sum
+end
+
+p multiples(1000)
