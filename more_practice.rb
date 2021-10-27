@@ -762,16 +762,53 @@ p fizzbuzz(15)
 # ---------------------------------------------------
 # Multiples of 3 and 5
 
-def multiples(input)
-  i = 0
-  sum = 0
-  while i < input
-    if i % 3 == 0 || i % 5 == 0
-      sum = sum + i
-    end
-    i += 1
-  end
-  return sum
-end
+# def multiples(input)
+#   i = 0
+#   sum = 0
+#   while i < input
+#     if i % 3 == 0 || i % 5 == 0
+#       sum = sum + i
+#     end
+#     i += 1
+#   end
+#   return sum
+# end
 
-p multiples(1000)
+# p multiples(1000)
+# ------------------------------------------------------
+# Collatz Conjecture
+
+# def collatz(n)
+#   steps = 0
+#   while (n != 1)
+#     if n % 2 == 0
+#       n = n / 2
+#     else
+#       n = (n * 3) + 1
+#     end
+#     steps = steps + 1
+#   end
+#   return steps
+# end
+
+# p collatz(12)
+
+# def collatz(n)
+#   steps = 0
+#   while (n > 1)
+#     if n % 2 == 0
+#       n = n / 2
+#       steps = steps + 1
+#       puts steps
+#     else
+#       n = (n * 3) + 1
+#       steps = steps + 1
+#       puts steps
+#     end
+#     return steps
+#   end
+#   return steps
+# end
+
+# steps = Collatz.new.collatz(12)
+# puts steps
