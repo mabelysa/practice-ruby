@@ -228,6 +228,7 @@
 # say_hello(5)
 
 #-----------------------------------------------
+#Skip It
 =begin
 - define/create a function that takes in selected numbers from the original array
 - while loop to iterate through the input array and shovel in the index selected into the new array
@@ -623,18 +624,18 @@ p fizzbuzz(15)
 # -----------------------------------------------------------
 # Reverse Words
 
-def reversewords(words)
-  new_words = words.split(" ")
-  new_array = []
-  i = new_words.length - 1
-  while i >= 0
-    new_array << new_words[i]
-    i -= 1
-  end
-  new_array.join(" ")
-end
+# def reversewords(words)
+#   new_words = words.split(" ")
+#   new_array = []
+#   i = new_words.length - 1
+#   while i >= 0
+#     new_array << new_words[i]
+#     i -= 1
+#   end
+#   new_array.join(" ")
+# end
 
-p reversewords("popcorn is so cool isn’t it yeah i thought so")
+# p reversewords("popcorn is so cool isn’t it yeah i thought so")
 
 # def reverse_string(input)
 #   new_reverse = ""
@@ -668,3 +669,63 @@ p reversewords("popcorn is so cool isn’t it yeah i thought so")
 #   end
 #   new_arr
 # end
+#-------------------------------------------------------
+#Primes
+
+=begin
+  
+=end
+
+# def prime(number)
+#   if number < 2
+#     return false
+#   end
+
+#   i = 2
+#   while i < number
+#     return false if number % i == 0
+#     i += 1
+#   end
+#   true
+# end
+
+# p prime(1)
+# p prime(2)
+# p prime(3)
+# p prime(4)
+# -------------------------------------------------------
+#Fibonacci Numbers
+# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,
+#                           x
+#                   i   i2
+def fibonacci(number)
+  num1, num2 = [0, 1]
+
+  (number - 1).times do
+    num1, num2 = num2, num1 + num2
+  end
+
+  num1
+end
+
+p fibonacci(9)
+
+def fibonacci(n)
+  seq = [0, 1]
+
+  while seq.length < n
+    last_ele = seq[-1]
+    second_to_last = seq[-2]
+    next_ele = last_ele + second_to_last
+    seq << next_ele
+  end
+
+  return seq.last
+end
+
+p fibonacci(9) # => 21
+
+# new_r = []
+# p new_r
+# array = [0, 1]
+# p array
