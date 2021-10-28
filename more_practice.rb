@@ -422,7 +422,7 @@
 # end
 
 # p palindrome("racecar")
-# p palindrome("baloney")
+# p palindrome("baloneb")
 # p palindrome("civic")
 
 # def palindrome?(string)
@@ -437,7 +437,7 @@
 #   return true
 # end
 
-# p palindrome?("whatupbutt")
+# p palindrome?("civic")
 # ------------------------
 # Hamming
 
@@ -812,3 +812,26 @@ p fizzbuzz(15)
 
 # steps = Collatz.new.collatz(12)
 # puts steps
+# ----------------------------
+#Largest Palindrome Product
+def largestpalindrome(num1, num2)
+  largest = 0
+
+  (num1..num2).each do |x|
+    (num1..num2).each do |y|
+      product = x * y
+      if palindrome?(product) && product > largest
+        largest = product
+      end
+    end
+  end
+
+  largest
+end
+
+def palindrome?(num)
+  num.to_s.reverse == num.to_s
+end
+
+p largestpalindrome(10, 99)
+p largestpalindrome(100, 999)
