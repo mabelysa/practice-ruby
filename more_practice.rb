@@ -814,24 +814,24 @@ p fizzbuzz(15)
 # puts steps
 # ----------------------------
 #Largest Palindrome Product
-def largestpalindrome(num1, num2)
-  largest = 0
+# def largestpalindrome(num1, num2)
+#   largest = 0
 
-  (num1..num2).each do |x|
-    (num1..num2).each do |y|
-      product = x * y
-      if palindrome?(product) && product > largest
-        largest = product
-      end
-    end
-  end
+#   (num1..num2).each do |x|
+#     (num1..num2).each do |y|
+#       product = x * y
+#       if palindrome?(product) && product > largest
+#         largest = product
+#       end
+#     end
+#   end
 
-  largest
-end
+#   largest
+# end
 
-def palindrome?(num)
-  num.to_s.reverse == num.to_s
-end
+# def palindrome?(num)
+#   num.to_s.reverse == num.to_s
+# end
 
-p largestpalindrome(10, 99)
-p largestpalindrome(100, 999)
+# p largestpalindrome(10, 99)
+# p largestpalindrome(100, 999)
